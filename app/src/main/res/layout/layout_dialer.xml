@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:gravity="start"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <GridLayout
+        android:id="@+id/gridlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneNumberEditText"
+        android:rowCount="4"
+        android:columnCount="3"
+        android:layout_marginTop="8dp"
+        android:paddingStart="46dp"
+        android:layout_marginBottom="12dp">
+
+        <!-- Grid items for dialer buttons -->
+        <Button
+            android:text="1"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="2"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="3"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="4"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="5"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="6"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="7"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="8"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="9"
+            style="@style/DialerButton" />
+
+        <Button
+            android:text="*"
+            style="@style/DialerButton"/>
+
+        <Button
+            android:text="0"
+            style="@style/DialerButton" />
+
+        <Button
+            android:id="@+id/backspaceButton"
+            android:text="#"
+            style="@style/DialerButton"
+            android:onClick="onBackspaceClick" />
+    </GridLayout>
+
+    <ImageButton
+        android:id="@+id/callButton"
+        android:layout_width="match_parent"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_height="64dp"
+        android:layout_below="@id/gridlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_call"
+        android:backgroundTint="@color/material_dynamic_tertiary80"
+        android:onClick="onCallButtonClick" />
+
+</RelativeLayout>
