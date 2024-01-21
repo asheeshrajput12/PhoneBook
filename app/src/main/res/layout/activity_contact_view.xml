@@ -1,9 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".app.ActivityContactView">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Contact Details -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/textViewContactDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!-- Contact Name -->
+    <TextView
+        android:id="@+id/textViewContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewContactDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Contact Phone Number -->
+    <TextView
+        android:id="@+id/textViewContactPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone: +123 456 7890"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewContactName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Contact Email -->
+    <TextView
+        android:id="@+id/textViewContactEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: john.doe@example.com"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewContactPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Button for Contact Action -->
+    <Button
+        android:id="@+id/buttonContactAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Now"
+        android:layout_below="@id/textViewContactEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/tvgmailsend"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:onClick="gmailButton"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Gmail"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMS"
+        android:onClick="smsButton"
+        android:padding="10dp"/>
+
+</LinearLayout>
